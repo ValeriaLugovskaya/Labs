@@ -1,8 +1,14 @@
 
+HEIGHT = 173
+WEIGHT = 60
+STEPS = 1000
+TIME = 60
+ENERGY = 0.035*WEIGHT+((STEPS/TIME)**2 / HEIGHT) * 0.029*WEIGHT
+DISTANCE = STEPS*(HEIGHT/4+0.37)/10000
+if (DISTANCE<2):
+    print(f"Сегодня вы пробежали всего {DISTANCE} км")
+elif (2<DISTANCE<4):
+    print(f"Результат лучше среднего: {DISTANCE} км!")
+elif (DISTANCE>4):
+    print(f"Это уже слишком..... Ваша дистанция: {DISTANCE} км!")
 
-CONST_H = 173
-CONST_M = 60
-CONST_STEPS = 10000
-CONST_TIME = 60
-CONST_ENERGY = 0.035*CONST_M+((CONST_STEPS/CONST_TIME)**2 / CONST_H) * 0.029*CONST_M
-print(f"Каллорий сожжено {CONST_ENERGY}; Пройденная дистанция: {CONST_STEPS*(CONST_H/4+0.37)/1000}")
