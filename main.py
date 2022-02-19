@@ -12,3 +12,9 @@ elif (2<DISTANCE<4):
 elif (DISTANCE>4):
     print(f"Это уже слишком..... Ваша дистанция: {DISTANCE} км!")
 
+word = input()
+if str(word) == str(word)[::-1]:
+    print("It's palindrome")
+else:
+    print("It's not palindrome")
+
